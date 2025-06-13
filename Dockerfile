@@ -25,7 +25,7 @@ ADD . $GOPATH/src/github.com/aerospike/aerospike-kubernetes-init/
 
 WORKDIR $GOPATH/src/github.com/aerospike/aerospike-kubernetes-init/
 
-RUN go build -o init . \
+RUN go build -buildvcs=false -o init . \
 	&& cp init /init
 
 WORKDIR $GOPATH/src/github.com/aerospike/aerospike-kubernetes-init/aerospike-utility/
