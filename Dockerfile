@@ -30,7 +30,7 @@ RUN go build -o init . \
 
 WORKDIR $GOPATH/src/github.com/aerospike/aerospike-kubernetes-init/aerospike-utility/
 
-RUN go build -o aku-adm . \
+RUN go build -buildvcs=false -o aku-adm . \
 	&& cp aku-adm /aku-adm
 
 FROM debian:buster-slim
